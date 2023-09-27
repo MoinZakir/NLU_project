@@ -81,24 +81,24 @@ rm -f ABSAaa ABSAab ABSAac ABSAad ABSAae
 ```
 
 **FOR WINDOWS USERS ONLY**
-```bash
-cd NLU_project/LAB_10/part_2/bin
-type BERTaa BERTab BERTac BERTad BERTae > BERT.pt
-del /F BERTaa BERTab BERTac BERTad BERTae
+```powershell
+cd .\NLU_project\LAB_10\part_2\bin
+Get-Content BERTaa, BERTab, BERTac, BERTad, BERTae | Out-File BERT.pt
+Remove-Item -Force BERTaa, BERTab, BERTac, BERTad, BERTae
 
-cd ../../../LAB_11/part_1/bin
-type SUBaa SUBab SUBac SUBad SUBae > subjectivity.pt
-del /F SUBaa SUBab SUBac SUBad SUBae
+cd ..\..\LAB_11\part_1\bin
+Get-Content SUBaa, SUBab, SUBac, SUBad, SUBae | Out-File subjectivity.pt
+Remove-Item -Force SUBaa SUBab SUBac SUBad SUBae
 
-type POLaa POLab POLac POLad POLae > polarity.pt
-del /F POLaa POLab POLac POLad POLae
+Get-Content POLaa POLab POLac POLad POLae | Out-File polarity.pt
+Remove-Item -Force POLaa POLab POLac POLad POLae
 
-type SUBPOLaa SUBPOLab SUBPOLac SUBPOLad SUBPOLae > subjectivity_polarity.pt
-del /F SUBPOLaa SUBPOLab SUBPOLac SUBPOLad SUBPOLae
+Get-Content SUBPOLaa SUBPOLab SUBPOLac SUBPOLad SUBPOLae | Out-File subjectivity_polarity.pt
+Remove-Item -Force SUBPOLaa SUBPOLab SUBPOLac SUBPOLad SUBPOLae
 
 cd ../../part_2/bin
-type ABSAaa ABSAab ABSAac ABSAad ABSAae > Aspect_based_sentiment_analysis.pt
-del /F ABSAaa ABSAab ABSAac ABSAad ABSAae
+Get-Content ABSAaa, ABSAab, ABSAac, ABSAad, ABSAae | Out-File Aspect_based_sentiment_analysis.pt
+Remove-Item -Force ABSAaa ABSAab ABSAac ABSAad ABSAae
 ```
 
 ### Step 3: start to run the project!
